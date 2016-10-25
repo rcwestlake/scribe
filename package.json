@@ -1,8 +1,11 @@
 {
-  "name": "trello",
+  "name": "scribe",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.0.1",
     "react-scripts": "0.7.0"
   },
   "dependencies": {
@@ -14,5 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }

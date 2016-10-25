@@ -1,4 +1,4 @@
-import React, { Component } from 'react' //eslint-disable
+import React, { Component } from 'react'
 import ReactDOM from 'react'
 import KanbanBoard from './components/KanbanBoard.jsx'
 import './App.css'
