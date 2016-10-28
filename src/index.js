@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import KanbanBoard from './components/KanbanBoard.jsx'
+import cardsList from './App'
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <KanbanBoard cards={cardsList} />,
   document.getElementById('root')
 );

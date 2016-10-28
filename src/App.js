@@ -1,11 +1,6 @@
+// eslint-disable-next-line
 import React, { Component } from 'react'
-import ReactDOM from 'react'
-import KanbanBoard from './components/KanbanBoard.jsx'
 import './App.css'
-
-export default class App extends Component {
-  
-}
 
 let cardsList = [
   {
@@ -40,4 +35,4 @@ let cardsList = [
   },
 ];
 
-ReactDOM.render(<KanbanBoard cards={cardsList} />, document.getElementById('root'));
+module.exports = cardsList
