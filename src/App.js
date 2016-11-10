@@ -35,4 +35,4 @@ let cardsList = [
   },
 ];
 
-module.exports = cardsList
+export default cardsList;
