@@ -1,6 +1,5 @@
-// eslint-disable-next-line
-import React, { Component } from 'react'
-import './App.css'
+import React, { Component } from 'react';
+import './App.css';
 
 let cardsList = [
   {
