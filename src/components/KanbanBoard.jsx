@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
-import List from './List'
+import React, { Component } from 'react';
+import List from './List';
+import Search from './Search';
 
-export default class KanbanBoard extends Component {
+class KanbanBoard extends Component {
   render() {
     return (
       <div className='app'>
+        <Search />
         <List
           id='todo'
           title='To Do'
@@ -24,3 +26,5 @@ export default class KanbanBoard extends Component {
     )
   }
 }
+
+export default KanbanBoard;
