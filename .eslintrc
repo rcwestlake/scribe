@@ -3,6 +3,7 @@
   "extends": "airbnb",
   },
   "rules": {
+    "semi": [1,"always"],
     "quotes": [2, "single"],
     "eol-last": [0],
     "no-mixed-requires": [0],
