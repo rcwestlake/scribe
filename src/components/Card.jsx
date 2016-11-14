@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import CheckList from './CheckList';
+import marked from 'marked';
 
 class Card extends Component {
   constructor() {
@@ -9,12 +10,19 @@ class Card extends Component {
     };
   }
 
+  toggleDetails() {
+    this.setState({
+      showDetails: !this.state.showDetails
+    });
+  }
+
   render() {
+    const { showDetails } = this.state;
     let cardDetails;
     if(this.state.showDetails) {
       cardDetails = (
         <div className='card-details'>
-          {this.props.description}
+          <span dangerouslySetInnerHTML={{__html:marked(this.props.description)}} />
           <CheckList
             cardId={this.props.id}
             tasks={this.props.tasks}
@@ -25,8 +33,8 @@ class Card extends Component {
     return (
       <div className='card'>
         <div
-          className='card-title'
-          onClick={() => this.setState({ showDetails: !this.state.showDetails })}
+          className={ showDetails ? 'card-title card-title--is-open' : 'card-title' }
+          onClick={() => this.toggleDetails()}
         >
           {this.props.title}
         </div>

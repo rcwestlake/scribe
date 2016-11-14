@@ -4,14 +4,14 @@ let cardsList = [
   {
     id: 1,
     title: 'Read the Book',
-    description: 'I should read the whole book',
+    description: 'I should read the **whole** book',
     status: 'in-progress',
     tasks: []
   },
   {
     id: 2,
     title: 'Write some code',
-    description: 'Code along with the samples in the book',
+    description: 'Code along with the samples in the book. The comlete source can be found at [github](http://github.com).',
     status: 'todo',
     tasks: [
       {

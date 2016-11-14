@@ -72,11 +72,11 @@ ul {
 .card-title:before {
   display: inline-block;
   width: 1em;
-  content: '>';
+  content: url('./images/right-arrow.png');
 }
 
 .card-title--is-open:before {
-  content: 'V';
+  content: url('./images/up-arrow.png');
 }
 
 .checklist-task:first-child {
