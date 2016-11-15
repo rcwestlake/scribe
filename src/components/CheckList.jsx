@@ -4,7 +4,7 @@ class CheckList extends Component {
   render() {
     const { tasks } = this.props;
     let allTasks = tasks.map((task) => {
-      return <li className='checklist-task'>
+      return <li key={task.id} className='checklist-task'>
         <input
           type='checkbox'
           defaultChecked={task.done}
