@@ -24,16 +24,34 @@ class KanbanBoardContainer extends Component {
       this.setState({
         cards: responseData,
       });
-      console.log(responseData);
     })
     .catch((error) => {
       console.log('Error in api call');
     });
   }
 
+  addTask(cardId, taskName) {
+    console.log('add');
+  }
+
+  removeTask(cardId, taskId, taskIndex) {
+    console.log('remove');
+  }
+
+  toggleTask(cardId, taskId, taskIndex) {
+    console.log('toggle');
+  }
+
   render() {
     return (
-      <KanbanBoard cards={this.state.cards} />
+      <KanbanBoard
+        cards={this.state.cards}
+        taskCallbacks={{
+          add: this.addTask.bind(this),
+          remove: this.removeTask.bind(this),
+          toggle: this.toggleTask.bind(this),
+        }}
+      />
     );
   }
 }

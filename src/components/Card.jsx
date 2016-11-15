@@ -38,6 +38,7 @@ class Card extends Component {
           <CheckList
             cardId={this.props.id}
             tasks={this.props.tasks}
+            taskCallbacks={this.props.taskCallbacks}
           />
         </div>
       )
@@ -50,7 +51,7 @@ class Card extends Component {
       bottom: 0,
       left: 0,
       width: 7,
-      backgroundColor: this.props.color
+      backgroundColor: this.props.color,
     };
 
     return (
@@ -74,6 +75,7 @@ Card.propTypes = {
   description: PropTypes.string,
   color: PropTypes.string,
   tasks: PropTypes.arrayOf(PropTypes.object),
+  taskCallbacks: PropTypes.object,
 }
 
 export default Card;

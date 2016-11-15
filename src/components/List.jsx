@@ -11,6 +11,7 @@ class List extends Component {
         description={card.description}
         tasks={card.tasks}
         color={card.color}
+        taskCallbacks={this.props.taskCallbacks}
              />
     })
 
@@ -26,6 +27,7 @@ class List extends Component {
 List.propTypes = {
   title: PropTypes.string.isRequired,
   cards: PropTypes.arrayOf(PropTypes.object),
+  taskCallbacks: PropTypes.object,
 }
 
 export default List;
