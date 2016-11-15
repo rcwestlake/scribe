@@ -1,6 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 
 class CheckList extends Component {
+  checkInputKeyPress(e) {
+    if(e.key === 'Enter') {
+      this.props.taskCallbacks.add(this.props.cardId, e.target.value);
+      e.target.value = '';
+    }
+  }
+
+
   render() {
     const { tasks } = this.props;
     let allTasks = tasks.map((task, index) => {
@@ -26,6 +34,7 @@ class CheckList extends Component {
           type='text'
           className='checklist--add-task'
           placeholder='Type, hit Enter to add task'
+          onKeyPress={(e) => this.checkInputKeyPress(e)}
         />
       </div>
     );
