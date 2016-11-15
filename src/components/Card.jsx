@@ -40,7 +40,7 @@ class Card extends Component {
       width: 7,
       backgroundColor: this.props.color
     };
-    
+
     return (
       <div className='card'>
         <div style={sideColor} />
@@ -58,7 +58,10 @@ class Card extends Component {
 
 Card.propTypes = {
   title: PropTypes.string,
+  id: PropTypes.number,
   description: PropTypes.string,
+  color: PropTypes.string,
+  tasks: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default Card;
