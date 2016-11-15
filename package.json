@@ -6,6 +6,7 @@
     "eslint": "^3.8.1",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.1",
+    "firebase": "^3.6.1",
     "react-scripts": "0.7.0"
   },
   "dependencies": {
